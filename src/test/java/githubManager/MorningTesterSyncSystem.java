@@ -1,4 +1,4 @@
-package github;
+package githubManager;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -90,8 +90,8 @@ public class MorningTesterSyncSystem {
 
     public static void main(String[] args) {
         // Bu değerleri kendi projenize göre ayarlayın
-        String projectPath = "C:\\Users\\user\\IdeaProjects\\xyz11";
-        // Tester'ın çalışacağı branch
+        String projectPath = "C:\\Users\\user\\IdeaProjects\\GithubWorkflow"; // Projenizin bilgisayardaki yolunu buraya giriniz
+        // Tester'ın çalışacağı branch . çalıştırmadan önce mutlaka branch oluşturun
         String testerBranch = "ahmet";
 
         MorningTesterSyncSystem syncSystem = new MorningTesterSyncSystem(projectPath, testerBranch);

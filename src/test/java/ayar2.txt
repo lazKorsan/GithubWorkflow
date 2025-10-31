@@ -1,0 +1,53 @@
+Arkadaşlar, bu proje geçici bir projedir.
+Projeye başlamadan önce ilgili eklentinin kurulması gerekmektedir.
+
+⚠️ ⚠️ ⚠️ ÖNEMLİ UYARILAR ⚠️ ⚠️ ⚠️
+
+1. **BRANCH ÇAKIŞMASI RİSKİ:**
+   - EveningTesterDeploySystem şu anda SABİT olarak "ahmet" branch'ine deploy yapıyor
+   - Bu, tüm takım arkadaşlarının aynı branch'e yazmasına neden olacak!
+   - ⛔️ ACİL ÇÖZÜM: EveningTesterDeploySystem.java 13. satırındaki "ahmet" değerini kendi branch adınızla değiştirin
+
+2. **GITHUB URL AYARI:**
+   - Eğer herkes kendi fork'unda çalışacaksa, githubUrl'yi kendi reponuzla güncelleyin
+   - Ortak repo kullanacaksanız, conflict'leri çözmeye hazırlıklı olun
+
+EKLENTİNİN DOĞRU ÇALIŞABİLMESİ İÇİN AŞAĞIDAKİ AYARLARI YAPMANIZ GEREKMEKTEDİR:
+
+1. **EveningTesterDeploySystem Sınıfı Ayarları:**
+   - **Proje Yolu:** `main` metodundaki `projectPath` değişkenini kendi bilgisayarınızdaki proje yoluna göre güncelleyin. // SATIR 58
+   - **GitHub URL:** `main` metodundaki `githubUrl` değişkenini kendi projenizin GitHub adresine göre güncelleyin.
+   - **BRANCH DEĞİŞİKLİĞİ (ACİL):** 13. satırdaki `"ahmet"` değerini kendi branch adınızla değiştirin:
+     ```java
+     // DEĞİŞTİR: this.deployer = new GitHubAutoDeployer(projectPath, githubUrl, "ahmet");
+     // OLACAK: this.deployer = new GitHubAutoDeployer(projectPath, githubUrl, "SIZIN_BRANCH_ADINIZ");
+     ```
+
+2. **MorningTesterSyncSystem Sınıfı Ayarları:**
+   - **Proje Yolu:** `main` metodundaki `projectPath` değişkenini kendi bilgisayarınızdaki proje yoluna göre güncelleyin. // SATIR 93
+   - **Çalışma Branch'i:** `main` metodundaki `testerBranch` değişkenini kendi branch adınızla değiştirin. // SATIR 94
+
+   Örnek:
+   String testerBranch = "ahmet"; // KENDİ BRANCH ADINIZI YAZIN
+
+3. **GÜVENLİK AYARLARI:**
+   - GitHub şifrelerinizi/token'larınızı kod içinde SABİT olarak saklamayın!
+   - Environment variables veya güvenli config dosyaları kullanın
+
+🎯 **AYAR KONTROL LİSTESİ:**
+- [ ] projectPath değişkeni güncellendi mi?
+- [ ] githubUrl kendi repoma göre ayarlandı mı?
+- [ ] EveningTesterDeploySystem'de branch adı değiştirildi mi? (13. SATIR - ACİL!)
+- [ ] MorningTesterSyncSystem'de branch adı ayarlandı mı?
+- [ ] .gitignore ayarları yapıldı mı?
+
+**PROJE SAĞLIĞI İÇİN `.gitignore` AYARI**
+
+Takım çalışması sırasında kişisel bilgisayar yolları (`projectPath`) gibi yerel ayarların çakışma olmasını engellemek önlemek için,
+ayar yapılan dosyaların Git tarafından takip edilmemesi gerekir.
+Projenizin ana dizininde bulunan `.gitignore` dosyasına aşağıdaki satırları ekleyin.
+
+```gitignore
+# Yerel test ve deploy script'lerini yoksay
+/src/test/java/githubManager/MorningTesterSyncSystem.java
+/src/test/java/githubManager/EveningTesterDeploySystem.java

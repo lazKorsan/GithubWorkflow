@@ -1,0 +1,40 @@
+
+Arkadaşlar, bu proje geçici bir projedir.
+Projeye başlamadan önce ilgili eklentinin kurulması gerekmektedir.
+
+Eklentinin doğru çalışabilmesi için aşağıdaki ayarları yapmanız gerekmektedir:
+
+1. **EveningTesterDeploySystem Sınıfı Ayarları:**
+   - **Proje Yolu:** `main` metodundaki `projectPath` değişkenini kendi bilgisayarınızdaki proje yoluna göre güncelleyin. // SATIR 58
+   - **GitHub URL:** `main` metodundaki `githubUrl` değişkenini kendi projenizin GitHub adresine göre güncelleyin. // ŞİMDİLİK SABİT
+   // ANAPROJEDE DEĞİŞECEK
+   - **DİKKAT:** Bu sınıf, deploy işlemini her zaman `"ahmet"` branch'ine yapacak şekilde ayarlanmıştır. (13. satırda sabitlenmiştir).
+
+2. **MorningTesterSyncSystem Sınıfı Ayarları:**
+   - **Proje Yolu:** `main` metodundaki `projectPath` değişkenini kendi bilgisayarınızdaki proje yoluna göre güncelleyin.  // SATIR 93
+   - **Çalışma Branch'i:** `main` metodundaki `testerBranch` değişkenini sabahları senkronize etmek istediğiniz kendi GitHub branch adınızla değiştirin. // SATIR 94
+
+   Örnek:
+   String testerBranch = "ahmet";
+
+**ÖNEMLİ NOT:** Sabah senkronizasyonu için ayarladığınız `testerBranch` ile akşam deploy sisteminin kullandığı sabit "ahmet" branch'inin tutarlı olduğundan emin olun.
+
+
+---
+
+**PROJE SAĞLIĞI İÇİN `.gitignore` AYARI**
+
+Takım çalışması sırasında kişisel bilgisayar yolları (`projectPath`) gibi yerel ayarların çakışma olmasını engellemek önlemek için,
+ayar yapılan dosyaların Git tarafından takip edilmemesi gerekir.
+Projenizin ana dizininde bulunan `.gitignore` dosyasına aşağıdaki satırları ekleyin.
+Bu sayede herkes kendi yerel ayarlarını güvenle yapabilir.
+
+```gitignore
+# Yerel test ve deploy script'lerini yoksay
+/src/test/java/githubManager/MorningTesterSyncSystem.java
+/src/test/java/githubManager/EveningTesterDeploySystem.java
+```
+
+// arkadaşlar branch adınızı bu dosyada ayarlamazsanız , kullandığınız projede otomatik olarak ahmet branch  oluşur.
+// lutfen kullanmadan önce ayarlarınızı yapınız.
+// ÇOK ÖNEMLİ : BUYUK PROJEDE BU EKLENTİYİ KULLANACAK ARKADAŞALRIN MUTLAKA GİT IGNORE AYARLARINI YAPMASI GEREKİR
