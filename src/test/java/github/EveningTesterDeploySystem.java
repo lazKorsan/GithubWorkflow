@@ -55,8 +55,8 @@ public class EveningTesterDeploySystem {
 
     public static void main(String[] args) {
         // Bu değerleri kendi projenize göre değiştirin
-        String projectPath = "C:\\Users\\user\\IdeaProjects\\xyz11";
-        String githubUrl = "https://github.com/lazKorsan/xyz11.git";
+        String projectPath = "C:\\Users\\user\\IdeaProjects\\GithubWorkflow"; // buraya projenizin bilgisayardaki yolunu girin
+        String githubUrl = "https://github.com/lazKorsan/GithubWorkflow.git";
 
         EveningTesterDeploySystem deploySystem = new EveningTesterDeploySystem(projectPath, githubUrl);
         deploySystem.startEveningDeployment();
