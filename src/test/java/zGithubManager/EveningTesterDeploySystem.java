@@ -10,7 +10,7 @@ public class EveningTesterDeploySystem {
     public EveningTesterDeploySystem(String projectPath, String githubUrl) {
         this.projectPath = projectPath;
         this.githubUrl = githubUrl;
-        this.deployer = new GitHubAutoDeployer(projectPath, githubUrl, "ahmet");
+        this.deployer = new GitHubAutoDeployer(projectPath, githubUrl, "xxxxx");
     }
 
     public void startEveningDeployment() {
@@ -55,7 +55,7 @@ public class EveningTesterDeploySystem {
 
     public static void main(String[] args) {
         // Bu değerleri kendi projenize göre değiştirin
-        String projectPath = "C:\\Users\\user\\IdeaProjects\\GithubWorkflow"; // buraya projenizin bilgisayardaki yolunu girin
+        String projectPath = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"; // buraya projenizin bilgisayardaki yolunu girin
         String githubUrl = "https://github.com/lazKorsan/GithubWorkflow.git";
 
         EveningTesterDeploySystem deploySystem = new EveningTesterDeploySystem(projectPath, githubUrl);
