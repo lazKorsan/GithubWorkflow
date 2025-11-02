@@ -1,4 +1,4 @@
-package githubManager;
+package zGithubManager;
 
 import java.util.Scanner;
 
