@@ -90,9 +90,9 @@ public class MorningTesterSyncSystem {
 
     public static void main(String[] args) {
         // Bu değerleri kendi projenize göre ayarlayın
-        String projectPath = "C:\\Users\\user\\IdeaProjects\\GithubWorkflow"; // Projenizin bilgisayardaki yolunu buraya giriniz
+        String projectPath = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"; // Projenizin bilgisayardaki yolunu buraya giriniz
         // Tester'ın çalışacağı branch . çalıştırmadan önce mutlaka branch oluşturun
-        String testerBranch = "ahmet";
+        String testerBranch = "xxxxxxxxxxxxxxxxxxxxxx"; // kendi branch adınız
 
         MorningTesterSyncSystem syncSystem = new MorningTesterSyncSystem(projectPath, testerBranch);
         syncSystem.startMorningSync();
