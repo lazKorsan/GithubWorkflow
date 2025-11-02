@@ -5,6 +5,9 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+import static zGithubManager.EveningTesterDeploySystem.projeBilgisayarYolu;
+import static zGithubManager.EveningTesterDeploySystem.yourBranchname;
+
 public class MorningTesterSyncSystem {
     private final String projectPath;
     private final String branchName;
@@ -90,9 +93,9 @@ public class MorningTesterSyncSystem {
 
     public static void main(String[] args) {
         // Bu değerleri kendi projenize göre ayarlayın
-        String projectPath = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"; // Projenizin bilgisayardaki yolunu buraya giriniz
+        String projectPath = projeBilgisayarYolu; // Projenizin bilgisayardaki yolunu buraya giriniz
         // Tester'ın çalışacağı branch . çalıştırmadan önce mutlaka branch oluşturun
-        String testerBranch = "xxxxxxxxxxxxxxxxxxxxxx"; // kendi branch adınız
+        String testerBranch = yourBranchname; // kendi branch adınız
 
         MorningTesterSyncSystem syncSystem = new MorningTesterSyncSystem(projectPath, testerBranch);
         syncSystem.startMorningSync();

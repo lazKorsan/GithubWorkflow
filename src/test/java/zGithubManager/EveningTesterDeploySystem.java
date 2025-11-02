@@ -6,11 +6,14 @@ public class EveningTesterDeploySystem {
     private GitHubAutoDeployer deployer;
     private String projectPath;
     private String githubUrl;
+    public static final String projeBilgisayarYolu = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+    public static final String yourBranchname = "xxxxxxxxxxxxxxxxxxxxx";
+    public static final String remoteURL = "https://github.com/lazKorsan/GithubWorkflow.git";
 
     public EveningTesterDeploySystem(String projectPath, String githubUrl) {
         this.projectPath = projectPath;
         this.githubUrl = githubUrl;
-        this.deployer = new GitHubAutoDeployer(projectPath, githubUrl, "xxxxx");
+        this.deployer = new GitHubAutoDeployer(projectPath, githubUrl, yourBranchname);
     }
 
     public void startEveningDeployment() {
@@ -55,8 +58,8 @@ public class EveningTesterDeploySystem {
 
     public static void main(String[] args) {
         // Bu değerleri kendi projenize göre değiştirin
-        String projectPath = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"; // buraya projenizin bilgisayardaki yolunu girin
-        String githubUrl = "https://github.com/lazKorsan/GithubWorkflow.git";
+        String projectPath = projeBilgisayarYolu ;     // buraya projenizin bilgisayardaki yolunu girin
+        String githubUrl = remoteURL;
 
         EveningTesterDeploySystem deploySystem = new EveningTesterDeploySystem(projectPath, githubUrl);
         deploySystem.startEveningDeployment();
