@@ -1,4 +1,4 @@
-package githubmanageryedek;
+package githubmanager;
 
 import java.io.BufferedReader;
 import java.io.File;
