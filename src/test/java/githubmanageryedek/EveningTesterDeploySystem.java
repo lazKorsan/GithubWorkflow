@@ -1,4 +1,4 @@
-package githubmanager;
+package githubmanageryedek;
 
 import java.util.Scanner;
 
