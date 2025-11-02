@@ -1,4 +1,4 @@
-package githubManager;
+package zGithubManager;
 
 import java.io.BufferedReader;
 import java.io.File;

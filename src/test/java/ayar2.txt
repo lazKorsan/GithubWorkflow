@@ -49,5 +49,5 @@ Projenizin ana dizininde bulunan `.gitignore` dosyasına aşağıdaki satırlar�
 
 ```gitignore
 # Yerel test ve deploy script'lerini yoksay
-/src/test/java/githubManager/MorningTesterSyncSystem.java
-/src/test/java/githubManager/EveningTesterDeploySystem.java
+/src/test/java/zGithubManager/MorningTesterSyncSystem.java
+/src/test/java/zGithubManager/EveningTesterDeploySystem.java
